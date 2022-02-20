@@ -1159,7 +1159,6 @@ button:focus {
   flex: 0 0 auto;
   width: 67.25%;
   flex-wrap: wrap;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -1865,8 +1864,6 @@ button:focus {
   margin-top: 0;
   padding: 0px;
   margin-bottom: 0;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .formify_signup_fullwidth_two .form_tab_two .formify_box .form_title {
@@ -2140,6 +2137,8 @@ button:focus {
   background: #ffb400;
     border-radius: 10px;
     padding-top: 20px;
+    width: 103%;
+    margin-left: -10px;
 }
 
 .formify_signup_fullwidth_two .form_tab_two .form_tab {
@@ -2233,9 +2232,9 @@ button:focus {
 }
 
 .left_loanlinks{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 4px;
 }
 
 .formify_signup_fullwidth_two .formify_right_fullwidth .formify_box .signup_form .form-group {
@@ -2283,6 +2282,7 @@ button:focus {
 
 .next_button {
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 formify_right_fullwidth {
@@ -2296,8 +2296,9 @@ formify_right_fullwidth {
 
 .formify_signup_fullwidth_two .form_tab_two {
   border: 3px solid #ffb400;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 10px;
+  background: white;
 }
 
 .formify_left_fullwidth {
@@ -2592,4 +2593,280 @@ p.header-subtitle {
 
 .formify_body {
   background-image: linear-gradient(315deg, rgb(124 255 203 / 10%) 0%, rgb(116 242 206 / 48%) 74%);
+}
+
+.header-img-section img{
+  width: 600px;
+  max-width: initial;
+}
+
+/*custom checkbox, radio*/
+.aiz-checkbox-list {
+  padding: 0 0;
+}
+.aiz-checkbox,
+.aiz-radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+[dir="rtl"] .aiz-checkbox,
+[dir="rtl"] .aiz-radio {
+  padding-right: 28px;
+  padding-left: 0;
+}
+.aiz-checkbox-list .aiz-checkbox,
+.aiz-radio-list .aiz-radio {
+  display: block;
+}
+.aiz-checkbox.aiz-checkbox-disabled,
+.aiz-radio.aiz-radio-disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+.aiz-checkbox-inline .aiz-checkbox,
+.aiz-radio-inline .aiz-radio {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.aiz-checkbox-inline .aiz-checkbox:last-child,
+.aiz-radio-inline .aiz-radio:last-child {
+  margin-right: 0;
+}
+.aiz-checkbox > input,
+.aiz-radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.aiz-square-check,
+.aiz-rounded-check {
+  background: 0 0;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #d1d7e2;
+}
+
+.aiz-checkbox .aiz-square-check,
+.aiz-checkbox .aiz-rounded-check,
+.aiz-radio .aiz-square-check,
+.aiz-radio .aiz-rounded-check {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+[dir="rtl"] .aiz-checkbox .aiz-square-check,
+[dir="rtl"] .aiz-checkbox .aiz-rounded-check,
+[dir="rtl"] .aiz-radio .aiz-square-check,
+[dir="rtl"] .aiz-radio .aiz-rounded-check{
+  left: auto;
+  right: 0
+}
+.aiz-square-check {
+  border-radius: 3px;
+}
+.aiz-rounded-check {
+  border-radius: 50%;
+}
+.aiz-square-check:after,
+.aiz-rounded-check:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.aiz-square-check:after {
+  margin-left: -2px;
+  margin-top: -6px;
+  width: 5px;
+  height: 10px;
+  border-width: 0 2px 2px 0 !important;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: solid var(--primary);
+}
+.aiz-rounded-check:after {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.aiz-checkbox > input:checked ~ .aiz-square-check:after,
+.aiz-radio > input:checked ~ .aiz-square-check:after,
+.aiz-checkbox > input:checked ~ .aiz-rounded-check:after,
+.aiz-radio > input:checked ~ .aiz-rounded-check:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*aiz megabox*/
+.aiz-megabox {
+  position: relative;
+  cursor: pointer;
+}
+.aiz-megabox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.aiz-megabox .aiz-megabox-elem {
+  border: 1px solid #e2e5ec;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+}
+.aiz-megabox > input:checked ~ span .aiz-rounded-check:after,
+.aiz-megabox > input:checked ~ span .aiz-square-check:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.aiz-megabox > input:checked ~ .aiz-megabox-elem,
+.aiz-megabox > input:checked ~ .aiz-megabox-elem {
+  background-color: #ffb400;
+  color: white;
+}
+
+.aiz-radio-inline label{
+margin-bottom: 0 !important;
+width: 100%;
+}
+
+.aiz-megabox .aiz-megabox-elem {
+  border: none;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+  font-size: 13px;
+  padding: 5px 10px !important;
+  border-radius: 999px !important;
+  background: #F1F3FB;
+}
+
+.left .aiz-radio-inline:nth-child(5){
+  grid-column: span 2;
+    width: 60%;
+}
+
+.left .aiz-radio-inline:nth-child(6){
+  grid-column: span 2;
+    width: 70%;
+}
+
+.right .aiz-radio-inline:nth-child(odd){
+  width: 90%;
+}
+
+.right .aiz-radio-inline:nth-child(even){
+  width: 133%;
+  margin-left: -8px;
+}
+
+.aiz-radio-inline{
+  position: relative;
+}
+
+.left_loan i{
+  font-weight: 500;
+    font-size: 8px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    background: white;
+}
+
+.secondleft_loadlinks{
+  grid-column-gap: 20px;
+}
+
+.tab-two{
+  position: relative;
+}
+
+.tab-two::after{
+  position: absolute;
+  content: '';
+  width: 106.8%;
+  height: 4px;
+  background-color: #ffb400;
+  left: -3.5%;
+  top: 75%;
+}
+
+.asset_link{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.asset_link input{
+  background-color: #F1F3FB;
+  border: none;
+  width: 60%;
+  margin: auto;
+  font-size: 12px;
+}
+
+.step_viewmore{
+  margin-top: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.final_box input{
+  width: 100% !important;
+}
+
+.form-check input{
+  width: initial !important;
+  position: initial;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+.form-check{
+  margin: 40px auto 0;
+}
+
+.form-check span{
+  color: #ffb400;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabsheight{
+  height: 50px !important;
+  margin-top: 10px;
+}
+
+.formify_signup_fullwidth_two .form_tab_two .form_tab li:nth-child(3) .nav-link.active:before, .formify_signup_fullwidth_two .form_tab_two .form_tab li:nth-child(3) .nav-link.complete:before {
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.formify_signup_fullwidth_two .form_tab_two .form_tab li:nth-child(3) .nav-link:after {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }

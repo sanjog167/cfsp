@@ -3081,3 +3081,7 @@ margin-top: 55px;
     border-radius: 999px;
     background: #ffb400;
 }
+
+.header-title img{
+  width: 100px;
+}

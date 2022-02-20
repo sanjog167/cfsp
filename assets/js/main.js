@@ -46,6 +46,7 @@
   if ($(".niceselect").length) {
     $(".niceselect").niceSelect();
   }
+  
 
   function bootstrapTabControl() {
     if ($(".form_tab .nav-link").hasClass("active")) {

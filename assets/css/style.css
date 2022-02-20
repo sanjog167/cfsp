@@ -38,6 +38,7 @@ Table of Content:
 /*Color Variables*/
 /*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 @font-face {
   font-family: LatoMedium;
   font-weight: 500;
@@ -1832,7 +1833,7 @@ button:focus {
   color: #b0b9c1;
   background: #fff;
   font-size: 13px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   line-height: 28px;
   position: relative;
@@ -2125,6 +2126,21 @@ button:focus {
   display: none;
 }
 
+.step1, .step2, .step3{
+  color: white !important;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.step2{
+  display: none ;
+}
+
+.step3{
+  display: none;
+}
+
+
 .formify_right_fullwidth .form_title {
   font-size: 24px;
   margin-bottom: 0;
@@ -2145,7 +2161,7 @@ button:focus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 10px;
-  margin-left: 150px;
+  margin-left: 135px;
   overflow: visible;
   max-width: 85%;
 }
@@ -2477,7 +2493,7 @@ section {
 
 #navbar .nav-link {
 	font-size: 16px;
-	color: #322153;
+	color: #fff;
 	line-height: 1;
 	font-weight: 500;
 }
@@ -2502,16 +2518,41 @@ section {
 	box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .05);
 }
 
-.header {
+/* .header {
 	display: flex;
 	width: 100%;
 	padding: 175px 0 100px;
 	justify-content: center;
 	align-items: center;
-	background-image: url("../img/header-bg.svg");
+	background-image: url("../img/homebanner.jpg");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: top;
+} */
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 175px 0px 100px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/homebanner.jpg);
+  background-size: contain;
+  background-position: center top;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+.header::after{
+  position: absolute;
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .header-container {
@@ -2554,10 +2595,10 @@ p.header-subtitle {
 	font-weight: 600;
     font-size: 50px;
     padding-bottom: 30px;
-	color: #322153;
+	color: white;
 }
 .header-title-text{
-	color: #777777;
+	color: white;
 	font-size: 16px;
 	margin-bottom: 30px;
 }
@@ -2572,9 +2613,20 @@ p.header-subtitle {
   background: #ffb400;
 }
 
+.contact-us-btn{
+  background-color: transparent;
+  border: 1px solid #ffb400;
+  margin-left: 20px;
+}
+
 .learn-more-:hover{
   background-color: #000;
   color: white;
+}
+
+.contact-us-btn:hover{
+  background-color: #ffb400;
+  border: none;
 }
 
 .menu-navbar-nav .active{
@@ -2592,7 +2644,11 @@ p.header-subtitle {
 }
 
 .formify_body {
-  background-image: linear-gradient(315deg, rgb(124 255 203 / 10%) 0%, rgb(116 242 206 / 48%) 74%);
+  /* background-image: linear-gradient(315deg, rgb(124 255 203 / 10%) 0%, rgb(116 242 206 / 48%) 74%);
+   */
+   background-image: url(../img/homebanner.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
 }
 
 .header-img-section img{
@@ -2781,6 +2837,13 @@ width: 100%;
   position: relative;
 }
 
+.left_loan button{
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  padding: 0;
+}
+
 .left_loan i{
   font-weight: 500;
     font-size: 8px;
@@ -2792,9 +2855,7 @@ width: 100%;
     align-items: center;
     justify-content: center;
     padding: 5px;
-    position: absolute;
-    top: -5px;
-    right: 5px;
+
     background: white;
 }
 
@@ -2869,4 +2930,116 @@ width: 100%;
 .formify_signup_fullwidth_two .form_tab_two .form_tab li:nth-child(3) .nav-link:after {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.footer{
+  background-color: #272A40;
+  padding: 50px 0 30px;
+  color: white;
+}
+
+.footer_links{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_links a:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.footer_links a{
+  cursor: pointer;
+}
+
+.bottomfooter a{
+  font-size: 15px;
+}
+
+.bottomfooter img{
+  width: 40px;
+}
+
+.bottomfooter .col-lg-3 i{
+  background: gray;
+  padding: 8px;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomfooter .col-lg-3 i:not(:last-child){
+  margin-right: 12px;
+}
+
+.bottomfooter a{
+  cursor: pointer;
+  color: hsla(0, 0%, 100%, 0.64) !important;
+}
+
+.formify_signup_fullwidth_two .form_tab_two .form_tab li .nav-link {
+  padding-left: 40px;
+  padding-top: 5px;
+}
+
+.footer_heading h3{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.footer_links a{
+  transition: 200ms ease-out;
+}
+
+.footer_links a:hover{
+  transform: translateX(2px);
+  color: white;
+}
+
+.bottomfooter a:hover{
+  color: white !important;
+}
+
+.left_loanlinks .btn:focus{
+  box-shadow: unset;
+  outline: none;
+}
+
+.modal-footer .btn-secondary{
+  background-color: #ffb400;
+  border: none;
+}
+
+.header-container{
+  font-family: 'Manrope', sans-serif;
+}
+
+.learn-more-btn {
+  font-family: 'Manrope', sans-serif;
+}
+
+#navbar .nav-link {
+  font-family: 'Manrope', sans-serif;
+}
+
+.footer{
+  font-family: 'Manrope', sans-serif;
+}
+
+.header-title-text {
+  line-height: 1.7;
+}
+
+.header-title {
+  line-height: 1.3;
+}
+
+@media(max-width:1500px){
+  .header{
+    height: initial;
+  }
 }

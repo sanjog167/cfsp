@@ -2824,6 +2824,18 @@ width: 100%;
     width: 70%;
 }
 
+.newleft .aiz-radio-inline:nth-child(5){
+  grid-column: initial;
+    width: initial;
+}
+
+.newleft .aiz-radio-inline:nth-child(6){
+  grid-column: initial;
+  width: initial;
+}
+
+
+
 .right .aiz-radio-inline:nth-child(odd){
   width: 90%;
 }
@@ -3084,4 +3096,94 @@ margin-top: 55px;
 
 .header-title img{
   width: 100px;
+}
+
+.formify_signup_fullwidth_two .cfsp_form_tab .form_tab li .nav-link:after {
+  background: #fff;
+}
+
+.cfsp_form_tab input{
+  width: 100% !important;
+}
+
+.tab_questions input{
+  width: initial !important;
+}
+
+.cfsp_form_tab textarea{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.attachandsubmit{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.attachandsubmit img{
+  width: 40px;
+  margin-right: 20px;
+}
+
+.attachandsubmit .input-group{
+  width: 300px;
+  cursor: pointer;
+}
+
+.attachandsubmit label{
+  border: none;
+    color: #518BDD;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.attachandsubmit .custom-file-input:lang(en)~.custom-file-label::after {
+  content: "";
+  background-color: unset;
+}
+
+.attachandsubmit .custom-file{
+  cursor: pointer;
+}
+
+.attachandsubmit .custom-file-input:focus~.custom-file-label {
+  box-shadow: unset;
+}
+
+.cfsp_form_tab .loantypes{
+  width: 100%;
+}
+
+.tab_questions{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 25px 20px 15px;
+  width: 100%;
+}
+
+.tab_questions div label:first-child {
+  margin-right: 10px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.tab_questions div label:nth-child(2){
+  margin-bottom: 0;
+}
+
+.tab_questions div input:nth-child(3) {
+  margin-right: 10px;
+}
+
+.tab_questions div:nth-child(even){
+  margin-left: 14px;
+}
+
+.cfsp_form_tab .asset_link{
+  padding-top: 15px;
+}
+
+.cfsp_form_tab .step1{
+  margin-left: -25px !important;
 }

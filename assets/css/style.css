@@ -3219,3 +3219,20 @@ margin-top: 55px;
   width: 100%;
 }
 }
+
+.right .aiz-radio-inline:nth-child(7) {
+  width: 111% !important;
+}
+
+#exampleModal4 ul li{
+  list-style: disc;
+  margin-bottom: 10px;
+}
+
+#exampleModal4 ul li span{
+  font-weight: bold;
+}
+
+#exampleModal4 ul{
+  padding: 0 20px;
+}
